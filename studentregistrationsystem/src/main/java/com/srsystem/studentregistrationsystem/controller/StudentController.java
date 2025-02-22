@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/students")
+@RequestMapping("/v1/api/students")
 public class StudentController {
     @Autowired
     private StudentService studentService;
@@ -19,7 +19,7 @@ public class StudentController {
         return "Student added";
     }
 
-    @GetMapping("getAll")
+    @GetMapping("/getAll")
     public List<Student> getAllStudents() {
         return studentService.getAllStudents();
     }
